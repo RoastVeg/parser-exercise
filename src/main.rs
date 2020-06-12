@@ -31,13 +31,13 @@ mod tests {
 
     #[test]
     fn sub_expr() {
-	let s = "";
+	let s = "3ae4c66fb32";
 	assert_eq!(parse_expr(String::from(s)), 235);
     }
 
     #[test]
     fn nested_sub_expr() {
-	let s = "";
+	let s = "3c4d2aee2a4c41fc4f";
 	assert_eq!(parse_expr(String::from(s)), 990);
     }
 }
