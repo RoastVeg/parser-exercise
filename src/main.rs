@@ -1,3 +1,5 @@
+use std::env;
+
 fn a_add(lhs: i32, rhs: &str) -> Result<i32, String> {
     let v = parse_expr(rhs)?;
     Ok(lhs + v)
@@ -64,7 +66,16 @@ fn parse_expr(sub_expr: &str) -> Result<i32, String> {
 }
 
 fn main() {
-    println!("{}", parse_expr("1a1").unwrap());
+    let args: Vec<String> = env::args().collect();
+    if args.len() != 2 {
+	println!("Usage: parser-exercise expression");
+    } else {
+	let result = parse_expr(&args[1]);
+	match result {
+	    Ok(v) => println!("{}", v),
+	    Err(e) => println!("{}", e),
+	}
+    }
 }
 
 #[cfg(test)]
