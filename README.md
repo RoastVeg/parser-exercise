@@ -17,3 +17,4 @@ This is a parser that compute simple integer arithmetic based on an input string
 ## Known Bugs
 
 `e`/`f` expressions collapse into concatenation when no outer operator is provided.
+Non-nested `e`/`f` expressions are not parsed correctly - e.g. `1ae3c3fbe1a4f` produces a false error
