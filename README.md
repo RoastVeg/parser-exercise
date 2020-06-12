@@ -8,6 +8,12 @@ This is a parser that compute simple integer arithmetic based on an input string
 * `d`: Division (only integer division supported)
 * `e` and `f`: Open and close bracket, respectively
 
+## Usage
+
+`cargo run <expr>` where `<expr>` is a string expression
+
+`cargo test` to run tests
+
 ## Known Bugs
 
 `e`/`f` expressions collapse into concatenation when no outer operator is provided.
